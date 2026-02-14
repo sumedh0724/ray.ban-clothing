@@ -1,0 +1,390 @@
+@font-face {
+    font-family: "ABBBCC";
+    src: url("/RB\ Regular.ttf");
+}
+@font-face {
+    font-family: "fornames";
+    src: url("/Kajiro\ Bold.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#back{
+    height: 100vh;
+    width: 100%;
+}
+
+
+#back img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#main{
+    pointer-events: none;
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    position: absolute;
+    padding-left: 100px;
+    top: 0;
+    z-index: 100;
+}
+
+.nav{
+    padding-top: 2vw;
+    width: 100%;
+    margin: auto;
+    /* padding-right: 70px; */
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navleft{
+    width: fit-content;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.navright{
+    width: fit-content;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.navleft>img{
+    width: 90px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.nav a{
+    pointer-events: all;
+    font-family: "ABBBCC";
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+}
+
+.hero{
+    margin-top: 80px;
+    display: flex; 
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: maroon; */
+}
+
+.heroleft{
+    width: fit-content;
+    height: fit-content;
+    /* margin-left: 50px; */
+}
+
+.heroright{
+    /* width: 300px; */
+    /* background-color: violet; */
+    max-width: 207px;
+    color: white;
+    font-family: "ABBBCC";
+    font-weight: 300;
+    text-align: end;
+}
+
+.heroright h3{
+    font-size: 10px;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.blnkimg{
+    width: 100%;
+    height: 150px;
+    background-image: url("https://images.unsplash.com/photo-1618323394441-ad3b2f76e72d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGdpcmwlMjB5ZWxsb3d8ZW58MHwwfDB8fHww");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.heroright p{
+    font-size: 10px;
+    margin-bottom: 30px;
+}
+
+.heroright :nth-child(4){
+    margin-top: 80px;
+}
+
+.hero h1{
+    font-size: 11vw;
+    color: white;
+    font-family: "fornames";
+    line-height: 140px;
+    font-weight: 100;
+    position: absolute;
+    top: 100%;
+}
+
+.h1{
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    height: 140px;
+}
+
+.h1 :nth-child(1){
+    top: 0%;
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    margin-top: 50px;
+    font-family: fornames;
+    font-size: 2.4vw;
+    letter-spacing: 6px;
+    border: none;
+    transition: all .2s linear;
+    pointer-events: all;
+}
+
+button:hover{
+    transform: scale(1.05);
+    background-color: black;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 350px) {
+    #main{
+        padding-left: 50px;
+        width: 90%;
+    }
+
+    .hero{
+        margin-top: 60px;
+    }
+
+    .h1{
+        width: 350px;
+        height: 100px;
+    }
+
+    .hero h1{
+        line-height: 100px;
+        font-size: 9vw;
+    }
+
+    .heroright{
+        max-width: 150px;
+    }
+
+    .heroright h3{
+        font-size: 9px;
+    }
+
+    .heroright p{
+        font-size: 9px;
+    }
+
+    .blnkimg{
+        height: 120px;
+    }
+
+    .navleft>img{
+        width: 70px;
+        height: 50px;
+    }
+
+    button{
+        width: 160px;
+        height: 45px;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #main{
+        padding-left: 30px;
+        width: 85%;
+    }
+
+    .nav{
+        gap: 1rem;
+    }
+
+    .navleft{
+        gap: 1.5rem;
+    }
+
+    .navright{
+        gap: 1.5rem;
+    }
+
+    .nav a{
+        font-size: 8px;
+    }
+
+    .hero{
+        justify-content: space-between;
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    .heroleft{
+        width: fit-content;
+    }
+
+    .h1{
+        width: 250px;
+        height: 80px;
+    }
+
+    .hero h1{
+        line-height: 80px;
+        font-size: 7vw;
+    }
+
+    .heroright{
+        max-width: 130px;
+        text-align: end;
+    }
+
+    .heroright h3{
+        font-size: 8px;
+        margin-bottom: 20px;
+    }
+
+    .heroright p{
+        font-size: 8px;
+        margin-bottom: 20px;
+    }
+
+    .blnkimg{
+        height: 100px;
+    }
+
+    .navleft>img{
+        width: 60px;
+        height: 40px;
+    }
+
+    button{
+        width: 140px;
+        height: 40px;
+        font-size: 1.8vw;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 350px) {
+    html, body{
+        overflow-y: auto;
+    }
+
+    #main{
+        padding-left: 15px;
+        width: 90%;
+    }
+
+    .nav{
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 3vw;
+    }
+
+    .navleft{
+        gap: 1rem;
+        justify-content: flex-start;
+    }
+
+    .navright{
+        gap: 1rem;
+        justify-content: flex-start;
+    }
+
+    .nav a{
+        font-size: 7px;
+    }
+
+    .hero{
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 15px;
+    }
+
+    .heroleft{
+        width: 100%;
+    }
+
+    .h1{
+        width: 180px;
+        height: 60px;
+    }
+
+    .hero h1{
+        line-height: 60px;
+        font-size: 5vw;
+    }
+
+    .heroright{
+        max-width: 100%;
+        text-align: start;
+    }
+
+    .heroright h3{
+        font-size: 8px;
+        margin-bottom: 15px;
+    }
+
+    .heroright p{
+        font-size: 8px;
+        margin-bottom: 15px;
+    }
+
+    .heroright :nth-child(4){
+        margin-top: 30px;
+    }
+
+    .blnkimg{
+        height: 100px;
+        margin-bottom: 15px;
+    }
+
+    .navleft>img{
+        width: 50px;
+        height: 35px;
+        margin-right: 5px;
+    }
+
+    button{
+        width: 120px;
+        height: 35px;
+        font-size: 1.5vw;
+        letter-spacing: 2px;
+        margin-top: 30px;
+    }
+}
+
